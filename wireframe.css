@@ -1,0 +1,163 @@
+label {
+    font-size: 35px;
+    margin: 0 auto;
+    font-family: "Noto Sans", sans-serif;
+    color: #f05454;
+    position: relative;
+    right: 35px;
+  }
+  
+  h1,
+  h3,
+  h4,
+  h5 {
+    margin: 0 auto;
+    color: #f05454;
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+  }
+  
+  h6 {
+    font-size: 35px;
+    position: relative;
+    left: 230px;
+    bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 150px;
+    position: relative;
+    left: 45px;
+  }
+  
+  #city-form {
+    display: block;
+    margin: 0 auto;
+    margin-left: 380px;
+    margin-top: 100px;
+    position: relative;
+    top: 0px;
+    width: 500px;
+  }
+  
+  .current-temp {
+    margin: 0 auto;
+    padding-left: 50px;
+    position: relative;
+    top: 100px;
+    left: 150px;
+  }
+  
+  .bottom-section {
+    max-width: 815px;
+    margin: 0 auto;
+    bottom: 100px;
+  }
+  
+  .weekday {
+    padding-top: 100px;
+  }
+  
+  .icons {
+    font-size: 75px;
+    color: white;
+    position: relative;
+    left: 10px;
+  }
+  
+  .circle-container {
+    background-color: #ffffff;
+  }
+  .center {
+    margin: 0 auto;
+  }
+  .circle {
+    border-radius: 100%; /* Must Have */
+    width: 1000px; /* Must Be the same as Height */
+    height: 1000px; /* Must Be the same as Width */
+    background-color: #222831;
+    border: thick double grey;
+  }
+  .shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+  }
+  
+  #big-icon {
+    color: white;
+    font-size: 150px;
+    position: relative;
+    left: 40px;
+    bottom: 20px;
+  }
+  
+  #city {
+    position: relative;
+    font-family: "Noto Sans", sans-serif;
+    color: #f05454;
+    font-size: 55px;
+    text-align: center;
+  }
+  
+  .city-information {
+    font-family: "Noto Sans", sans-serif;
+    color: white;
+    position: relative;
+    top: 20px;
+  }
+  
+  #weather-description {
+    position: relative;
+    right: 50px;
+  }
+  
+  #divider-one {
+    position: relative;
+    bottom: 401px;
+    left: 469px;
+    color: #f05454;
+  }
+  #divider-two {
+    position: relative;
+    bottom: 558px;
+    left: 278px;
+    color: white;
+  }
+  
+  #celsius {
+    color: #f05454;
+    position: relative;
+    right: 117px;
+  }
+  
+  #fahrenheit {
+    color: #f05454;
+    position: relative;
+    right: 100px;
+  }
+  
+  #search-button {
+    position: relative;
+    top: 4px;
+  }
+  
+  #day {
+    position: relative;
+    right: 15px;
+  }
+  
+  #time {
+    position: relative;
+    left: 20px;
+  }
+  
+  #search-button {
+    max-width: 22px;
+    position: relative;
+    left: 208px;
+  }
+  
