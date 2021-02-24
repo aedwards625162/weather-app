@@ -160,4 +160,19 @@ label {
     position: relative;
     left: 208px;
   }
+
+  a {
+    text-align: center;
+    color: #f05454;
+  }
+
+  #name {
+   
+    color: white;
+  }
+
+  .credentials {
+    margin: 0 auto;
+    text-align: center;
+  }
   
