@@ -40,6 +40,8 @@ let days = [
     let newDescription = response.data.weather[0].main;
     let currentDescription = document.querySelector("#weather-description");
     currentDescription.innerHTML = `${newDescription}`;
+    let bigIcon = document.querySelector(".fas fa-snowflake");
+    bigIcon.innerHTML = `http://openweathermap.org/img/wn/10d@2x.png`;
   }
   
   
