@@ -44,7 +44,7 @@ h1 {
   margin: 0 auto;
   padding-left: 50px;
   position: relative;
-  top: 100px;
+  top: 70px;
   left: 150px;
 }
 
@@ -102,18 +102,31 @@ h1 {
   color: #f05454;
   font-size: 55px;
   text-align: center;
+  padding-top: 15px;
 }
 
 .city-information {
   font-family: "Noto Sans", sans-serif;
   color: white;
   position: relative;
-  top: 20px;
+  top: 12px;
+  margin: 0 auto;
+  left: 105px;
+}
+
+#time {
+  position: relative;
+  left: 125px;
 }
 
 #weather-description {
   position: relative;
-  right: 50px;
+  right: 125px;
+}
+
+#day {
+  position: relative;
+  right: 28px;
 }
 
 #divider-one {
@@ -139,6 +152,7 @@ h1 {
   color: #f05454;
   position: relative;
   right: 100px;
+  padding-top: 20px;
 }
 
 #search-button {
@@ -146,14 +160,8 @@ h1 {
   top: 4px;
 }
 
-#day {
-  position: relative;
-  right: 15px;
-}
-
-#time {
-  position: relative;
-  left: 20px;
+.city-name {
+  margin: 0 auto;
 }
 
 #search-button {
@@ -174,6 +182,7 @@ a {
 .credentials {
   margin: 0 auto;
   text-align: center;
+  padding-top: 120px;
 }
 
 #iconOne,

@@ -1,11 +1,11 @@
 let days = [
-    "Sun.",
-    "Mon.",
-    "Tues.",
-    "Wed.",
-    "Thurs.",
-    "Fri.",
-    "Sat."
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
   ];
   
   let now = new Date();
@@ -51,6 +51,8 @@ let days = [
     dayThree.innerHTML = `${daySlotThree}`;
     dayFour.innerHTML = `${daySlotFour}`;
     dayFive.innerHTML = `${daySlotFive}`;
+
+
     
   }
   
