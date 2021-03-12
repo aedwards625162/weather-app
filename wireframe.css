@@ -150,9 +150,9 @@ h1 {
 
 #fahrenheit {
   color: #f05454;
+  font-size: 50px;
   position: relative;
-  right: 100px;
-  padding-top: 20px;
+  bottom: 85px;
 }
 
 #search-button {
@@ -203,4 +203,8 @@ a {
   text-align: center;
   font-family: "Noto Sans", sans-serif;
   font-size: 26px;
+}
+
+#degrees-low {
+  color: white;
 }

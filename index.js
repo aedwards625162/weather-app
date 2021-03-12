@@ -18,6 +18,7 @@ let days = [
   currentDay.innerHTML = `${weekDay}`;
   currentTime.innerHTML = `${time}`;
   
+  
   function displayForecast (response) {
     let days = [
     "Sun.",
@@ -52,9 +53,44 @@ let days = [
     dayFour.innerHTML = `${daySlotFour}`;
     dayFive.innerHTML = `${daySlotFive}`;
 
+    let minMaxOne = document.querySelector("#minMaxOne");
+    let minMaxTwo = document.querySelector("#minMaxTwo");
+    let minMaxThree = document.querySelector("#minMaxThree");
+    let minMaxFour = document.querySelector("#minMaxFour");
+    let minMaxFive = document.querySelector("#minMaxFive");
+    let forecastDayOne = response.data.list[1];
+    let forecastDayTwo = response.data.list[9];
+    let forecastDayThree = response.data.list[17];
+    let forecastDayFour = response.data.list[25];
+    let forecastDayFive = response.data.list[33];
 
-    
-  }
+    console.log(response.data.list);
+
+minMaxOne.innerHTML= `<div class="col" id="minMaxOne">
+							<div class="col">
+								<h4>${Math.round(forecastDayOne.main.temp_max)}°  <span id="degrees-low">${Math.round(forecastDayOne.main.feels_like)}°</span></h4>
+							</div>`;
+minMaxTwo.innerHTML= `<div class="col" id="minMaxTwo">
+							<div class="col">
+								<h4>${Math.round(forecastDayTwo.main.temp_max)}°  <span id="degrees-low">${Math.round(forecastDayTwo.main.feels_like)}°</span></h4>
+							</div>`;
+minMaxThree.innerHTML= `<div class="col" id="minMaxThree">
+							<div class="col">
+								<h4>${Math.round(forecastDayThree.main.temp_max)}°  <span id="degrees-low">${Math.round(forecastDayThree.main.feels_like)}°</span></h4>
+							</div>`;
+minMaxFour.innerHTML= `<div class="col" id="minMaxFour">
+							<div class="col">
+								<h4>${Math.round(forecastDayFour.main.temp_max)}°  <span id="degrees-low">${Math.round(forecastDayFour.main.feels_like)}°</span></h4>
+							</div>`;
+minMaxFive.innerHTML= `<div class="col" id="minMaxFive">
+							<div class="col">
+								<h4>${Math.round(forecastDayFive.main.temp_max)}°  <span id="degrees-low">${Math.round(forecastDayFive.main.feels_like)}°</span></h4>
+							</div>`;
+
+
+
+
+            }
   
   function showWeather(event) {
       event.preventDefault();
@@ -62,6 +98,7 @@ let days = [
       let searchCity = document.querySelector("#city-input");
       let currentCity = document.querySelector("#city");
       currentCity.innerHTML = `${searchCity.value}`;
+      let cityName = document.querySelector(".city-name");
       let apiUrl =
       `https://api.openweathermap.org/data/2.5/weather?q=${searchCity.value}&units=imperial&appid=${apiKey}`;
       axios.get(`${apiUrl}`).then(showTemperature);
@@ -75,7 +112,7 @@ let days = [
   
   function showTemperature(response) {
     let newTemperature = Math.round(response.data.main.temp);
-    let temperatureElement = document.querySelector("h1");
+    let temperatureElement = document.querySelector("#main-degree");
     temperatureElement.innerHTML = `${newTemperature}`;
     let newDescription = response.data.weather[0].main;
     let currentDescription = document.querySelector("#weather-description");
