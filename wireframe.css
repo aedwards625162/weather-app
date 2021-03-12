@@ -111,7 +111,7 @@ h1 {
   position: relative;
   top: 12px;
   margin: 0 auto;
-  left: 105px;
+  left: 100px;
 }
 
 #time {
@@ -122,11 +122,6 @@ h1 {
 #weather-description {
   position: relative;
   right: 125px;
-}
-
-#day {
-  position: relative;
-  right: 28px;
 }
 
 #divider-one {

@@ -12,10 +12,10 @@ let days = [
   let weekDay = days[now.getDay()];
   let hours = now.getHours();
   let minutes = now.getMinutes();
-  let time = `${hours}:${minutes}`;
+  let time = `${hours}:${minutes}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0|`;
   let currentDay = document.querySelector("#day");
   let currentTime = document.querySelector("#time");
-  currentDay.innerHTML = `${weekDay}`;
+  currentDay.innerHTML = `${weekDay}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0|`;
   currentTime.innerHTML = `${time}`;
   
   
