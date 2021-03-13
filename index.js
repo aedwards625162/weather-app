@@ -53,6 +53,41 @@ let days = [
     dayFour.innerHTML = `${daySlotFour}`;
     dayFive.innerHTML = `${daySlotFive}`;
 
+    let iconOne = document.querySelector("#iconOne");
+    let iconTwo = document.querySelector("#iconTwo");
+    let iconThree = document.querySelector("#iconThree");
+    let iconFour = document.querySelector("#iconFour");
+    let iconFive = document.querySelector("#iconFive");
+    let iconDayOne =  response.data.list[1];
+    let iconDayTwo =  response.data.list[9];
+    let iconDayThree =  response.data.list[17];
+    let iconDayFour =  response.data.list[25];
+    let iconDayFive =  response.data.list[33];
+    
+    
+    iconOne.innerHTML= `<div id="iconOne" class="col">
+    <img src="http://openweathermap.org/img/wn/${iconDayOne.weather[0].icon}.png" alt=""></div>`;
+    iconTwo.innerHTML= `<div id="iconTwo" class="col">
+    <img src="http://openweathermap.org/img/wn/${iconDayTwo.weather[0].icon}.png" alt=""></div>`;
+    iconThree.innerHTML= `<div id="iconThree" class="col">
+    <img src="http://openweathermap.org/img/wn/${iconDayThree.weather[0].icon}.png" alt=""></div>`;
+    iconFour.innerHTML= `<div id="iconFour" class="col">
+    <img src="http://openweathermap.org/img/wn/${iconDayFour.weather[0].icon}.png" alt=""></div>`;
+    iconFive.innerHTML= `<div id="iconFive" class="col">
+    <img src="http://openweathermap.org/img/wn/${iconDayFive.weather[0].icon}.png" alt=""></div>`;
+    
+    
+        if(iconDayOne.weather[0].icon === "01d" || iconDayOne.weather[0].icon === "01n") {
+          iconOne.setAttribute("src", "img/clear-sky-small.png");
+          
+        if(iconDayOne.weather[0].icon === "04n" || iconDayOne.weather[0].icon === "04d") {
+          iconOne.setAttribute("src", "img/few-clouds-small.png");
+
+        }
+
+      
+    
+
     let minMaxOne = document.querySelector("#minMaxOne");
     let minMaxTwo = document.querySelector("#minMaxTwo");
     let minMaxThree = document.querySelector("#minMaxThree");
@@ -63,8 +98,6 @@ let days = [
     let forecastDayThree = response.data.list[17];
     let forecastDayFour = response.data.list[25];
     let forecastDayFive = response.data.list[33];
-
-    console.log(response.data.list);
 
 minMaxOne.innerHTML= `<div class="col" id="minMaxOne">
 							<div class="col">
@@ -90,7 +123,8 @@ minMaxFive.innerHTML= `<div class="col" id="minMaxFive">
 
 
 
-            }
+
+            }}
   
   function showWeather(event) {
       event.preventDefault();
@@ -123,6 +157,3 @@ minMaxFive.innerHTML= `<div class="col" id="minMaxFive">
     bigIcon.setAttribute ("alt", response.data.weather[0].description);
   
   }
-  
-  
-  
