@@ -53,11 +53,11 @@ let days = [
     dayFour.innerHTML = `${daySlotFour}`;
     dayFive.innerHTML = `${daySlotFive}`;
 
-    let iconOne = document.querySelector("#iconOne");
-    let iconTwo = document.querySelector("#iconTwo");
-    let iconThree = document.querySelector("#iconThree");
-    let iconFour = document.querySelector("#iconFour");
-    let iconFive = document.querySelector("#iconFive");
+    let iconElementOne = document.querySelector("#iconOne");
+    let iconElementTwo = document.querySelector("#iconTwo");
+    let iconElementThree = document.querySelector("#iconThree");
+    let iconElementFour = document.querySelector("#iconFour");
+    let iconElementFive = document.querySelector("#iconFive");
     let iconDayOne =  response.data.list[1];
     let iconDayTwo =  response.data.list[9];
     let iconDayThree =  response.data.list[17];
@@ -65,36 +65,36 @@ let days = [
     let iconDayFive =  response.data.list[33];
     
     
-    iconOne.innerHTML= `<div id="iconOne" class="col">
+    iconElementOne.innerHTML= `<div id="iconOne" class="col">
     <img src="http://openweathermap.org/img/wn/${iconDayOne.weather[0].icon}.png" alt=""></div>`;
-    iconTwo.innerHTML= `<div id="iconTwo" class="col">
+    iconElementTwo.innerHTML= `<div id="iconTwo" class="col">
     <img src="http://openweathermap.org/img/wn/${iconDayTwo.weather[0].icon}.png" alt=""></div>`;
-    iconThree.innerHTML= `<div id="iconThree" class="col">
+    iconElementThree.innerHTML= `<div id="iconThree" class="col">
     <img src="http://openweathermap.org/img/wn/${iconDayThree.weather[0].icon}.png" alt=""></div>`;
-    iconFour.innerHTML= `<div id="iconFour" class="col">
+    iconElementFour.innerHTML= `<div id="iconFour" class="col">
     <img src="http://openweathermap.org/img/wn/${iconDayFour.weather[0].icon}.png" alt=""></div>`;
-    iconFive.innerHTML= `<div id="iconFive" class="col">
+    iconElementFive.innerHTML= `<div id="iconFive" class="col">
     <img src="http://openweathermap.org/img/wn/${iconDayFive.weather[0].icon}.png" alt=""></div>`;
     
     
           if(iconDayOne.weather[0].icon === "01d" || iconDayOne.weather[0].icon === "01n") {
-      iconOne.setAttribute("id", "iconOne");
+      iconElementOne.setAttribute("id", "iconFive");
     } else if(iconDayOne.weather[0].icon === "02d" || iconDayOne.weather[0].icon === "02n") {
-      iconElement.setAttribute("id", "iconOne");
+      iconElementOne.setAttribute("id", "iconTwo");
     } else if(iconDayOne.weather[0].icon === "03d" || iconDayOne.weather[0].icon === "03n") {
-      iconOne.setAttribute("id", "iconOne");
+      iconElementOne.setAttribute("id", "iconThree");
     } else if(iconDayOne.weather[0].icon === "04d" || iconDayOne.weather[0].icon === "04n") {
-      iconOne.setAttribute("id", "iconOne");
+      iconElementOne.setAttribute("id", "iconFour");
     } else if(iconDayOne.weather[0].icon === "09d" || iconDayOne.weather[0].icon === "09n") {
-      iconOne.setAttribute("id", "iconOne");
+      iconElementOne.setAttribute("id", "iconFive");
     } else if(iconDayOne.weather[0].icon === "10d" || iconDayOne.weather[0].icon === "10n") {
-      iconOne.setAttribute("id", "iconOne");
+      iconElementOne.setAttribute("id", "iconTwo");
     } else if(iconDayOne.weather[0].icon === "11d" || iconDayOne.weather[0].icon === "11n") {
-      iconOne.setAttribute("id", "iconOne");
+      iconElementOne.setAttribute("id", "iconFive");
     } else if(iconDayOne.weather[0].icon === "13d" || iconDayOne.weather[0].icon === "13n") {
-      iconOne.setAttribute("id", "iconOne");
+      iconElementOne.setAttribute("id", "iconTwo");
     } else if(iconDayOne.weather[0].icon === "50d" || iconDayOne.weather[0].icon === "50n") {
-      iconOne.setAttribute("id", "iconOne");
+      iconElementOne.setAttribute("id", "iconOne");
     }
     
 
