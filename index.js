@@ -63,8 +63,6 @@ let days = [
     let iconDayThree =  response.data.list[17].weather[0].icon;
     let iconDayFour =  response.data.list[25].weather[0].icon;
     let iconDayFive =  response.data.list[33].weather[0].icon;
-
-    
    
      iconElementOne.innerHTML= `<div id="iconOne" class="col">
     <img style="width: 100px; "src="http://openweathermap.org/img/wn/${iconDayOne}.png" alt=""></div>`;
@@ -78,23 +76,23 @@ let days = [
     <img style="width: 100px; "src="http://openweathermap.org/img/wn/${iconDayFive}.png" alt=""></div>`;
 
     if(iconDayOne === "01d" || iconDayOne === "01n") {
-      iconElementOne.setAttribute("src", "iconFour");
+      iconElementOne.setAttribute("src", "img/iconFive.png");
     } else if(iconDayOne === "02d" || iconDayOne === "02n") {
-      iconElementOne.setAttribute("src", "iconFour");
+      iconElementOne.setAttribute("src", "img/iconFour.png");
     } else if(iconDayOne === "03d" || iconDayOne === "03n") {
-     iconElementOne.setAttribute("src", "iconFour");
+     iconElementOne.setAttribute("src", "img/iconOne.png");
     } else if(iconDayOne === "04d" || iconDayOne === "04n") {
-     iconElementOne.setAttribute("src", "iconFour");
+     iconElementOne.setAttribute("src", "img/iconOne.png");
     } else if(iconDayOne === "09d" || iconDayOne === "09n") {
-     iconElementOne.setAttribute("src", "iconFour");
+     iconElementOne.setAttribute("src", "img/iconTwo.png");
     } else if(iconDayOne === "10d" || iconDayOne === "10n") {
-     iconElementOne.setAttribute("src", "iconFour");
+     iconElementOne.setAttribute("src", "img/iconTwo.png");
     } else if(iconDayOne === "11d" || iconDayOne === "11n") {
-      iconElementOne.setAttribute("src", "iconFour");
+      iconElementOne.setAttribute("src", "img/iconTwo.png");
     } else if(iconDayOne === "13d" || iconDayOne === "13n") {
-      iconElementOne.setAttribute("src", "iconFour");
+      iconElementOne.setAttribute("src", "img/iconThree.png");
     } else if(iconDayOne === "50d" || iconDayOne === "50n") {
-      iconElementOne.setAttribute("src", "iconFour");
+      iconElementOne.setAttribute("src", "img/iconOne.png");
     }
 
 
