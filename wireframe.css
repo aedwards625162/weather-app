@@ -44,7 +44,7 @@ h1 {
   margin: 0 auto;
   padding-left: 50px;
   position: relative;
-  top: 70px;
+  top: 60px;
   left: 150px;
 }
 
@@ -94,7 +94,7 @@ h1 {
   height: auto;
   position: relative;
   left: 40px;
-  bottom: 20px;
+  top: 24px;
 }
 
 #city {
@@ -110,14 +110,14 @@ h1 {
   font-family: "Noto Sans", sans-serif;
   color: white;
   position: relative;
-  top: 12px;
+  top: 20px;
   margin: 0 auto;
-  left: 100px;
+  left: 93px;
 }
 
 #time {
   position: relative;
-  left: 125px;
+  left: 155px;
 }
 
 #weather-description {
@@ -154,16 +154,15 @@ h1 {
 #search-button {
   position: relative;
   top: 4px;
+  max-width: 22px;
+  position: relative;
+  left: 208px;
 }
 
 .city-name {
   margin: 0 auto;
-}
-
-#search-button {
-  max-width: 22px;
   position: relative;
-  left: 208px;
+  top: 8px;
 }
 
 a {
@@ -178,7 +177,7 @@ a {
 .credentials {
   margin: 0 auto;
   text-align: center;
-  padding-top: 120px;
+  padding-top: 110px;
 }
 
 #iconOne,
@@ -224,4 +223,9 @@ a {
 
 #degrees-low {
   color: white;
+}
+
+#day {
+  position: relative;
+  right: 10px;
 }

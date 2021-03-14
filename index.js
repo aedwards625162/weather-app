@@ -12,10 +12,10 @@ let days = [
   let weekDay = days[now.getDay()];
   let hours = now.getHours();
   let minutes = now.getMinutes();
-  let time = `${hours}:${minutes}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0|`;
+  let time = `${hours}:${minutes}\u00A0\u00A0\u00A0\u00A0|`;
   let currentDay = document.querySelector("#day");
   let currentTime = document.querySelector("#time");
-  currentDay.innerHTML = `${weekDay}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0|`;
+  currentDay.innerHTML = `${weekDay}\u00A0\u00A0\u00A0|`;
   currentTime.innerHTML = `${time}`;
   
   
@@ -77,15 +77,25 @@ let days = [
     <img src="http://openweathermap.org/img/wn/${iconDayFive.weather[0].icon}.png" alt=""></div>`;
     
     
-        if(iconDayOne.weather[0].icon === "01d" || iconDayOne.weather[0].icon === "01n") {
-          iconOne.setAttribute("src", "img/clear-sky-small.png");
-          
-        if(iconDayOne.weather[0].icon === "04n" || iconDayOne.weather[0].icon === "04d") {
-          iconOne.setAttribute("src", "img/few-clouds-small.png");
-
-        }
-
-      
+          if(iconDayOne.weather[0].icon === "01d" || iconDayOne.weather[0].icon === "01n") {
+      iconOne.setAttribute("id", "iconOne");
+    } else if(iconDayOne.weather[0].icon === "02d" || iconDayOne.weather[0].icon === "02n") {
+      iconElement.setAttribute("id", "iconOne");
+    } else if(iconDayOne.weather[0].icon === "03d" || iconDayOne.weather[0].icon === "03n") {
+      iconOne.setAttribute("id", "iconOne");
+    } else if(iconDayOne.weather[0].icon === "04d" || iconDayOne.weather[0].icon === "04n") {
+      iconOne.setAttribute("id", "iconOne");
+    } else if(iconDayOne.weather[0].icon === "09d" || iconDayOne.weather[0].icon === "09n") {
+      iconOne.setAttribute("id", "iconOne");
+    } else if(iconDayOne.weather[0].icon === "10d" || iconDayOne.weather[0].icon === "10n") {
+      iconOne.setAttribute("id", "iconOne");
+    } else if(iconDayOne.weather[0].icon === "11d" || iconDayOne.weather[0].icon === "11n") {
+      iconOne.setAttribute("id", "iconOne");
+    } else if(iconDayOne.weather[0].icon === "13d" || iconDayOne.weather[0].icon === "13n") {
+      iconOne.setAttribute("id", "iconOne");
+    } else if(iconDayOne.weather[0].icon === "50d" || iconDayOne.weather[0].icon === "50n") {
+      iconOne.setAttribute("id", "iconOne");
+    }
     
 
     let minMaxOne = document.querySelector("#minMaxOne");
@@ -119,12 +129,7 @@ minMaxFive.innerHTML= `<div class="col" id="minMaxFive">
 							<div class="col">
 								<h4>${Math.round(forecastDayFive.main.temp_max)}°  <span id="degrees-low">${Math.round(forecastDayFive.main.feels_like)}°</span></h4>
 							</div>`;
-
-
-
-
-
-            }}
+            }
   
   function showWeather(event) {
       event.preventDefault();
