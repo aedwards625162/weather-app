@@ -65,35 +65,15 @@ let days = [
     let iconDayFive =  response.data.list[33].weather[0].icon;
    
      iconElementOne.innerHTML= `<div id="iconOne" class="col">
-    <img style="width: 100px; "src="http://openweathermap.org/img/wn/${iconDayOne}.png" alt=""></div>`;
+    <img style="width: 100px; "src="img/${iconDayOne}.png" alt=""></div>`;
      iconElementTwo.innerHTML= `<div id="iconTwo" class="col">
-    <img style="width: 100px; "src="http://openweathermap.org/img/wn/${iconDayTwo}.png" alt=""></div>`;
+    <img style="width: 100px; "src="img/${iconDayTwo}.png" alt=""></div>`;
      iconElementThree.innerHTML= `<div id="iconThree" class="col">
-    <img style="width: 100px; "src="http://openweathermap.org/img/wn/${iconDayThree}.png" alt=""></div>`;
+    <img style="width: 100px; "src="img/${iconDayThree}.png" alt=""></div>`;
      iconElementFour.innerHTML= `<div id="iconFour" class="col">
-    <img style="width: 100px; "src="http://openweathermap.org/img/wn/${iconDayFour}.png" alt=""></div>`;
+    <img style="width: 100px; "src="img/${iconDayFour}.png" alt=""></div>`;
      iconElementFive.innerHTML= `<div id="iconFive" class="col">
-    <img style="width: 100px; "src="http://openweathermap.org/img/wn/${iconDayFive}.png" alt=""></div>`;
-
-    if(iconDayOne === "01d" || iconDayOne === "01n") {
-      iconElementOne.setAttribute("src", "img/iconFive.png");
-    } else if(iconDayOne === "02d" || iconDayOne === "02n") {
-      iconElementOne.setAttribute("src", "img/iconFour.png");
-    } else if(iconDayOne === "03d" || iconDayOne === "03n") {
-     iconElementOne.setAttribute("src", "img/iconOne.png");
-    } else if(iconDayOne === "04d" || iconDayOne === "04n") {
-     iconElementOne.setAttribute("src", "img/iconOne.png");
-    } else if(iconDayOne === "09d" || iconDayOne === "09n") {
-     iconElementOne.setAttribute("src", "img/iconTwo.png");
-    } else if(iconDayOne === "10d" || iconDayOne === "10n") {
-     iconElementOne.setAttribute("src", "img/iconTwo.png");
-    } else if(iconDayOne === "11d" || iconDayOne === "11n") {
-      iconElementOne.setAttribute("src", "img/iconTwo.png");
-    } else if(iconDayOne === "13d" || iconDayOne === "13n") {
-      iconElementOne.setAttribute("src", "img/iconThree.png");
-    } else if(iconDayOne === "50d" || iconDayOne === "50n") {
-      iconElementOne.setAttribute("src", "img/iconOne.png");
-    }
+    <img style="width: 100px; "src="img/${iconDayFive}.png" alt=""></div>`;
 
 
     let minMaxOne = document.querySelector("#minMaxOne");
@@ -149,9 +129,11 @@ minMaxFive.innerHTML= `<div class="col" id="minMaxFive">
             let currentDescription = document.querySelector("#weather-description");
             currentDescription.innerHTML = `${newDescription}`;
             let bigIcon = document.querySelector("#bigIcon");
-            
-            bigIcon.setAttribute ("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-            bigIcon.setAttribute ("alt", response.data.weather[0].description);
+            let bigIconElement =  response.data.weather[0].icon;
+            let bigIconAlt = response.data.weather[0].description;
+
+             bigIcon.innerHTML= `<div class="offset-1 col-2">
+						<img id="bigIcon" src="img/${bigIconElement}-big.png" alt="${bigIconAlt}"></div>`;
           }
           
           function searchCity(city) {
