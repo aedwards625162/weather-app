@@ -15,7 +15,7 @@ let days = [
   let time = `${hours}:${minutes}\u00A0\u00A0\u00A0\u00A0|`;
   let currentDay = document.querySelector("#day");
   let currentTime = document.querySelector("#time");
-  currentDay.innerHTML = `${weekDay}\u00A0\u00A0\u00A0|`;
+  currentDay.innerHTML = `${weekDay}\u00A0\u00A0\u00A0\u00A0|`;
   currentTime.innerHTML = `${time}`;
   
   
@@ -58,45 +58,45 @@ let days = [
     let iconElementThree = document.querySelector("#iconThree");
     let iconElementFour = document.querySelector("#iconFour");
     let iconElementFive = document.querySelector("#iconFive");
-    let iconDayOne =  response.data.list[1];
-    let iconDayTwo =  response.data.list[9];
-    let iconDayThree =  response.data.list[17];
-    let iconDayFour =  response.data.list[25];
-    let iconDayFive =  response.data.list[33];
+    let iconDayOne =  response.data.list[1].weather[0].icon;
+    let iconDayTwo =  response.data.list[9].weather[0].icon;
+    let iconDayThree =  response.data.list[17].weather[0].icon;
+    let iconDayFour =  response.data.list[25].weather[0].icon;
+    let iconDayFive =  response.data.list[33].weather[0].icon;
+
     
-    
-    iconElementOne.innerHTML= `<div id="iconOne" class="col">
-    <img src="http://openweathermap.org/img/wn/${iconDayOne.weather[0].icon}.png" alt=""></div>`;
-    iconElementTwo.innerHTML= `<div id="iconTwo" class="col">
-    <img src="http://openweathermap.org/img/wn/${iconDayTwo.weather[0].icon}.png" alt=""></div>`;
-    iconElementThree.innerHTML= `<div id="iconThree" class="col">
-    <img src="http://openweathermap.org/img/wn/${iconDayThree.weather[0].icon}.png" alt=""></div>`;
-    iconElementFour.innerHTML= `<div id="iconFour" class="col">
-    <img src="http://openweathermap.org/img/wn/${iconDayFour.weather[0].icon}.png" alt=""></div>`;
-    iconElementFive.innerHTML= `<div id="iconFive" class="col">
-    <img src="http://openweathermap.org/img/wn/${iconDayFive.weather[0].icon}.png" alt=""></div>`;
-    
-    
-          if(iconDayOne.weather[0].icon === "01d" || iconDayOne.weather[0].icon === "01n") {
-      iconElementOne.setAttribute("id", "iconFive");
-    } else if(iconDayOne.weather[0].icon === "02d" || iconDayOne.weather[0].icon === "02n") {
-      iconElementOne.setAttribute("id", "iconTwo");
-    } else if(iconDayOne.weather[0].icon === "03d" || iconDayOne.weather[0].icon === "03n") {
-      iconElementOne.setAttribute("id", "iconThree");
-    } else if(iconDayOne.weather[0].icon === "04d" || iconDayOne.weather[0].icon === "04n") {
-      iconElementOne.setAttribute("id", "iconFour");
-    } else if(iconDayOne.weather[0].icon === "09d" || iconDayOne.weather[0].icon === "09n") {
-      iconElementOne.setAttribute("id", "iconFive");
-    } else if(iconDayOne.weather[0].icon === "10d" || iconDayOne.weather[0].icon === "10n") {
-      iconElementOne.setAttribute("id", "iconTwo");
-    } else if(iconDayOne.weather[0].icon === "11d" || iconDayOne.weather[0].icon === "11n") {
-      iconElementOne.setAttribute("id", "iconFive");
-    } else if(iconDayOne.weather[0].icon === "13d" || iconDayOne.weather[0].icon === "13n") {
-      iconElementOne.setAttribute("id", "iconTwo");
-    } else if(iconDayOne.weather[0].icon === "50d" || iconDayOne.weather[0].icon === "50n") {
-      iconElementOne.setAttribute("id", "iconOne");
+   
+     iconElementOne.innerHTML= `<div id="iconOne" class="col">
+    <img style="width: 100px; "src="http://openweathermap.org/img/wn/${iconDayOne}.png" alt=""></div>`;
+     iconElementTwo.innerHTML= `<div id="iconTwo" class="col">
+    <img style="width: 100px; "src="http://openweathermap.org/img/wn/${iconDayTwo}.png" alt=""></div>`;
+     iconElementThree.innerHTML= `<div id="iconThree" class="col">
+    <img style="width: 100px; "src="http://openweathermap.org/img/wn/${iconDayThree}.png" alt=""></div>`;
+     iconElementFour.innerHTML= `<div id="iconFour" class="col">
+    <img style="width: 100px; "src="http://openweathermap.org/img/wn/${iconDayFour}.png" alt=""></div>`;
+     iconElementFive.innerHTML= `<div id="iconFive" class="col">
+    <img style="width: 100px; "src="http://openweathermap.org/img/wn/${iconDayFive}.png" alt=""></div>`;
+
+    if(iconDayOne === "01d" || iconDayOne === "01n") {
+      iconElementOne.setAttribute("src", "iconFour");
+    } else if(iconDayOne === "02d" || iconDayOne === "02n") {
+      iconElementOne.setAttribute("src", "iconFour");
+    } else if(iconDayOne === "03d" || iconDayOne === "03n") {
+     iconElementOne.setAttribute("src", "iconFour");
+    } else if(iconDayOne === "04d" || iconDayOne === "04n") {
+     iconElementOne.setAttribute("src", "iconFour");
+    } else if(iconDayOne === "09d" || iconDayOne === "09n") {
+     iconElementOne.setAttribute("src", "iconFour");
+    } else if(iconDayOne === "10d" || iconDayOne === "10n") {
+     iconElementOne.setAttribute("src", "iconFour");
+    } else if(iconDayOne === "11d" || iconDayOne === "11n") {
+      iconElementOne.setAttribute("src", "iconFour");
+    } else if(iconDayOne === "13d" || iconDayOne === "13n") {
+      iconElementOne.setAttribute("src", "iconFour");
+    } else if(iconDayOne === "50d" || iconDayOne === "50n") {
+      iconElementOne.setAttribute("src", "iconFour");
     }
-    
+
 
     let minMaxOne = document.querySelector("#minMaxOne");
     let minMaxTwo = document.querySelector("#minMaxTwo");
@@ -130,35 +130,38 @@ minMaxFive.innerHTML= `<div class="col" id="minMaxFive">
 								<h4>${Math.round(forecastDayFive.main.temp_max)}°  <span id="degrees-low">${Math.round(forecastDayFive.main.feels_like)}°</span></h4>
 							</div>`;
             }
-  
-  function showWeather(event) {
-      event.preventDefault();
-      let apiKey = "f2cebfbf982873905eeaba1ac6acbbfd";
-      let searchCity = document.querySelector("#city-input");
-      let currentCity = document.querySelector("#city");
-      currentCity.innerHTML = `${searchCity.value}`;
-      let cityName = document.querySelector(".city-name");
-      let apiUrl =
-      `https://api.openweathermap.org/data/2.5/weather?q=${searchCity.value}&units=imperial&appid=${apiKey}`;
-      axios.get(`${apiUrl}`).then(showTemperature);
 
-      apiUrlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${searchCity.value}&appid=${apiKey}&units=imperial`;
-      axios.get(apiUrlForecast).then(displayForecast);
-  }
-  
-  let input = document.querySelector("#city-form");
-  input.addEventListener("submit", showWeather);
-  
-  function showTemperature(response) {
-    let newTemperature = Math.round(response.data.main.temp);
-    let temperatureElement = document.querySelector("#main-degree");
-    temperatureElement.innerHTML = `${newTemperature}`;
-    let newDescription = response.data.weather[0].main;
-    let currentDescription = document.querySelector("#weather-description");
-    currentDescription.innerHTML = `${newDescription}`;
-    let bigIcon = document.querySelector("#bigIcon");
-
-    bigIcon.setAttribute ("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-    bigIcon.setAttribute ("alt", response.data.weather[0].description);
-  
-  }
+            
+            let input = document.querySelector("#city-form");
+            input.addEventListener("submit", showWeather);
+            
+            function showWeather(event) {
+            event.preventDefault();
+            let cityInput = document.querySelector("#city-input");
+            let currentCity = document.querySelector("#city");
+            currentCity.innerHTML = `${cityInput.value}`;
+            searchCity(cityInput.value);
+          }
+          
+          function showTemperature(response) {
+            let newTemperature = Math.round(response.data.main.temp);
+            let temperatureElement = document.querySelector("#main-degree");
+            temperatureElement.innerHTML = `${newTemperature}`;
+            let newDescription = response.data.weather[0].main;
+            let currentDescription = document.querySelector("#weather-description");
+            currentDescription.innerHTML = `${newDescription}`;
+            let bigIcon = document.querySelector("#bigIcon");
+            
+            bigIcon.setAttribute ("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+            bigIcon.setAttribute ("alt", response.data.weather[0].description);
+          }
+          
+          function searchCity(city) {
+            let apiKey = "f2cebfbf982873905eeaba1ac6acbbfd";
+            let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
+            axios.get(`${apiUrl}`).then(showTemperature);
+            apiUrlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`;
+            axios.get(apiUrlForecast).then(displayForecast);
+          }
+          
+          searchCity("Austin");
