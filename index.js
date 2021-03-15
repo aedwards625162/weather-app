@@ -132,8 +132,8 @@ minMaxFive.innerHTML= `<div class="col" id="minMaxFive">
             let bigIconElement =  response.data.weather[0].icon;
             let bigIconAlt = response.data.weather[0].description;
 
-             bigIcon.innerHTML= `<div class="offset-1 col-2">
-						<img id="bigIcon" src="img/${bigIconElement}-big.png" alt="${bigIconAlt}"></div>`;
+            bigIcon.setAttribute("src", `img/${bigIconElement}-big.png`);
+            bigIcon.setAttribute("alt", bigIconAlt);
           }
           
           function searchCity(city) {
